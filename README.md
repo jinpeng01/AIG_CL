@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Graph Enhanced Contrastive Learning for Radiology Findings Summarization 
 Code for *[Graph Enhanced Contrastive Learning for Radiology Findings Summarization]*
@@ -43,3 +44,6 @@ To start evaluation, run
 ```
 sh train_entity/test_openi.sh
 ```
+=======
+# AIG_CL
+>>>>>>> 82ab83a2b5a0326f8dd34bec9e0f5b97fd995cc7
