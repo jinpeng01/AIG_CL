@@ -17,7 +17,7 @@ This repo contains the PyTorch code following [this code](https://github.com/nlp
 We give an example about the data in the `graph_construction/`
 
 ### Preparation
-
+Remain to be origanized. Some of the code needs to be debug, plz use it carefully.
 
 #### Graph Construction
 We have given the example about the data format to construct the graph (each line is a radiology report).
