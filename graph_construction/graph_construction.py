@@ -180,8 +180,6 @@ def get_single_entity_graph(document,impression,entity_modified=True,entity_inte
             tag_index.append(edge_item[1])
         pyg_edges_document.append([src_index,tag_index])
 
-    # import pdb
-    # pdb.set_trace()
 
     return pyg_edges_document,edge_words,fingings_list,impression_list,edges_type,words_id_entities
 
