@@ -220,16 +220,6 @@ def test_abs(args, device_id, pt, step):
     model = AbsSummarizer(args, device, checkpoint)
     model.eval()
 
-    valid_iter = data_loader.Dataloader(args, load_dataset(args, 'valid', shuffle=False),
-                                        args.batch_size, device,
-                                        shuffle=False, is_test=True)
-    tokenizer = BertTokenizer.from_pretrained('dmis-lab/biobert-base-cased-v1.1', do_lower_case=False,
-                                              cache_dir=args.temp_dir)
-    symbols = {'BOS': tokenizer.vocab['[unused99]'], 'EOS': tokenizer.vocab['[unused1]'],
-               'PAD': tokenizer.vocab['[PAD]'], 'EOQ': tokenizer.vocab['[unused2]']}
-    predictor = build_predictor(args, tokenizer, symbols, model, logger)
-    predictor.translate(valid_iter, step)
-
     test_iter = data_loader.Dataloader(args, load_dataset(args, 'test', shuffle=False),
                                        args.test_batch_size, device,
                                        shuffle=False, is_test=True)
