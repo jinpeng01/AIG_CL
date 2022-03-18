@@ -44,3 +44,6 @@ To start evaluation, run
 ```
 sh train_entity/test_openi.sh
 ```
+
+## Pre-trained model
+you can download the pre-trained models from ([the link](https://pan.baidu.com/s/1vE7EIdQF3x-5PgWXpEXrsg)  passwd: co14).
