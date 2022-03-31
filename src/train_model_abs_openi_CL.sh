@@ -1,5 +1,4 @@
-#
-Model_path=openi_model_biobert_777
+Model_path=openi_model_biobert
 
 gpus=5,6,7
 # gpus=-1

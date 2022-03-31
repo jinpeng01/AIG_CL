@@ -35,14 +35,14 @@ change DATA_PATH to your data_path,
 To start training, run
 
 ```
-sh train_entity/train_model_abs_openi_CL.sh
+sh train_model_abs_openi_CL.sh
 ```
 
 ## Evaluation
 change DATA_PATH Model_path to your data_path and model path and let the step to a specific number
 To start evaluation, run
 ```
-sh train_entity/test_openi.sh
+sh test_openi.sh
 ```
 
 ## Pre-trained model
