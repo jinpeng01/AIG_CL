@@ -1,18 +1,18 @@
-Model_path=mimic_model_biobert_999
 
-
+Model_path=openi_model_biobert
 echo $Model_path
 log_file2=$Model_path.test.log
 result_file=$Model_path.result
-bert_data_path=../biobert_entity_mimic_data/radiology/radiology
+bert_data_path=../biobert_entity_openi_data/radiology/radiology
+gpus=3
 
-gpus=0
 # input to one checkpoint index
 
-let "step = 80000"
+let "step = 10000"
 test_model=model_step_$step.pt
 echo $test_model
-CUDA_VISIBLE_DEVICES=0 python train.py \
+echo $Model_path/$test_model
+CUDA_VISIBLE_DEVICES=3 python train.py \
 -task abs \
 -mode test \
 -batch_size 1000 \
@@ -29,4 +29,3 @@ CUDA_VISIBLE_DEVICES=0 python train.py \
 -min_length 6 \
 -result_path ../logs/$result_file \
 -test_from $Model_path/$test_model
-
