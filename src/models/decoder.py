@@ -295,9 +295,6 @@ class TransformerDecoder(nn.Module):
         entity_graph_state = self.entity_graph_gnn(memory_bank, edges)
         if self.graph_connect_type == 'concat':
             memory_bank = self.Linear_graph(torch.cat([memory_bank, entity_graph_state], dim=-1))
-            # import pdb
-            # pdb.set_trace()
-
         else:
             memory_bank = memory_bank + entity_graph_state
 
@@ -309,16 +306,12 @@ class TransformerDecoder(nn.Module):
 
         for i in range(src_size[0]):
             entities_findings_size = entities_findings[i, :].size()[0]
-            # print(entities_findings_size)
             if entities_findings_size != 0:
                 label_entity[i, entities_findings[i, :],:] = 1
                 label_entity_ones[i, entities_findings[i, :],:] = 0
 
         positive = torch.masked_fill(memory_bank,label_entity_ones.bool(),1e-6)
         negative = torch.masked_fill(memory_bank,label_entity.bool(),1e-6)
-
-
-        batch_size, word_num, hidden_dim = memory_bank.shape[0], memory_bank.shape[1], memory_bank.shape[2]
 
         positive = self.CL_transformer(positive)
         negative = self.CL_transformer(negative)
@@ -337,8 +330,6 @@ class TransformerDecoder(nn.Module):
         positive_cos2 = positive_cos.unsqueeze(dim=-1)
         negative_cos2 = negative_cos.unsqueeze(dim=-1)
 
-        # import pdb
-        # pdb.set_trace()
 
         output = self.pos_emb(emb, step)
 
@@ -359,7 +350,6 @@ class TransformerDecoder(nn.Module):
             saved_inputs = []
 
         for i in range(self.num_layers):
-            previous_output = output
             prev_layer_input = None
             if state.cache is None:
                 if state.previous_input is not None:

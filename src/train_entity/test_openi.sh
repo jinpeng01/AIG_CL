@@ -1,4 +1,7 @@
 
+
+
+
 Model_path=openi_model_biobert_777_dec_0.06
 echo $Model_path
 log_file2=$Model_path.test.log
