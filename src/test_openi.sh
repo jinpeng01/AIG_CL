@@ -29,3 +29,4 @@ CUDA_VISIBLE_DEVICES=3 python train.py \
 -min_length 6 \
 -result_path ../logs/$result_file \
 -test_from $Model_path/$test_model
+

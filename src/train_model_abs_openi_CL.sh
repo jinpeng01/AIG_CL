@@ -1,7 +1,6 @@
 Model_path=openi_model_biobert
 
 gpus=5,6,7
-# gpus=-1
 log_file=$Model_path.log
 
 lr_bert=0.0005
@@ -21,7 +20,7 @@ python train.py  \
 -lr_dec ${lr_dec} \
 -save_checkpoint_steps 500 \
 -batch_size 128 \
--train_steps 20000 \
+-train_steps 30000 \
 -report_every 50 \
 -accum_count 5 \
 -use_bert_emb true \
