@@ -3,8 +3,11 @@ Model_path=openi_model_biobert
 gpus=5,6,7
 log_file=$Model_path.log
 
-lr_bert=0.0005
-lr_dec=0.05
+# lr_bert=0.0005
+# lr_dec=0.05
+
+lr_bert=0.0003
+lr_dec=0.04
 
 echo $lr_bert
 echo $lr_dec
