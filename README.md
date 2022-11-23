@@ -1,11 +1,30 @@
-<<<<<<< HEAD
 
 # Graph Enhanced Contrastive Learning for Radiology Findings Summarization 
-Code for *[Graph Enhanced Contrastive Learning for Radiology Findings Summarization]*
+Code for [Graph Enhanced Contrastive Learning for Radiology Findings Summarization](https://aclanthology.org/2022.acl-long.320/)
 
 ==========
 
 This repo contains the PyTorch code following [this code](https://github.com/nlpyang/PreSumm)
+
+## Citations
+
+If you use or extend our work, please cite our paper at ACL-2022.
+```
+@inproceedings{hu-etal-2022-graph,
+    title = "Graph Enhanced Contrastive Learning for Radiology Findings Summarization",
+    author = "Hu, Jinpeng  and
+      Li, Zhuo  and
+      Chen, Zhihong  and
+      Li, Zhen  and
+      Wan, Xiang  and
+      Chang, Tsung-Hui",
+    booktitle = "Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = may,
+    year = "2022"
+}
+```
+
+
 
 ## Requirements
 
